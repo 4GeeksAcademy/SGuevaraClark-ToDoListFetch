@@ -1,12 +1,127 @@
-
-/* 
-
-    You can write your own styles here...
+:root {
+    --primary-color: #646cff;
+    --bg-color: #f5f5f5;
+    --text-color: #213547;
+    --border-color: #e0e0e0;
+    --hover-color: #535bf2;
+    --delete-color: #ff4444;
+    --delete-hover: #ff1111;
+  }
+  
+  body {
+    margin: 0;
+    min-width: 320px;
+    min-height: 100vh;
+    background-color: var(--bg-color);
+    color: var(--text-color);
+    font-family: Inter, system-ui, -apple-system, sans-serif;
+  }
+  
+  .container {
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+  }
+  
+  .title {
+    font-size: 2.5rem;
+    color: var(--text-color);
+    text-align: center;
+    margin-bottom: 2rem;
+  }
+  
+  .todo-wrapper {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem;
+  }
+  
+  .todo-form {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .todo-input {
+    flex: 1;
+    padding: 0.8rem 1rem;
+    border: 2px solid var(--border-color);
+    border-radius: 6px;
+    font-size: 1rem;
+    transition: border-color 0.2s;
+  }
+  
+  .todo-input:focus {
+    outline: none;
+    border-color: var(--primary-color);
+  }
+  
+  .add-button {
+    padding: 0.8rem 1.5rem;
+    background-color: var(--primary-color);
+    color: white;
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.2s;
+  }
+  
+  .add-button:hover {
+    background-color: var(--hover-color);
+  }
+  
+  .todo-list {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+  }
+  
+  .todo-item {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    border-bottom: 1px solid var(--border-color);
+    transition: background-color 0.2s;
+  }
+  
+  .todo-item:last-child {
+    border-bottom: none;
+  }
+  
+  .todo-item:hover {
+    background-color: rgba(0, 0, 0, 0.02);
+  }
+  
+  .todo-text {
+    flex: 1;
+    margin-right: 1rem;
+  }
+  
+  .delete-button {
+    background: none;
+    border: none;
+    color: var(--delete-color);
+    font-size: 1.5rem;
+    font-weight: bold;
+    padding: 0.2rem 0.6rem;
+    cursor: pointer;
+    border-radius: 4px;
+    transition: all 0.2s;
+  }
+  
+  .delete-button:hover {
+    background-color: var(--delete-color);
+    color: white;
+  }
+  
+  @media (max-width: 480px) {
+    .todo-form {
+      flex-direction: column;
+    }
     
-    
-    ...Or you can use the import command to include 
-    other sylesheets into your bunde as well, e.j:
-    
-    import 'relative/path/to/stylesheet.scss';
-
-*/
+    .add-button {
+      width: 100%;
+    }
+  }
